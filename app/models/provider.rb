@@ -7,5 +7,6 @@ class Provider < ApplicationRecord
   validates :category, presence:true
   validates :expertise, presence:true
   validates :rating, numericality: { lower_than_or_equal_to: 5}
+  validates :phone, uniqueness:true
 
 end

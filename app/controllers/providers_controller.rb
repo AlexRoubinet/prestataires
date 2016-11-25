@@ -41,7 +41,8 @@ class ProvidersController < ApplicationController
   private
 
   def product_params
-    params.require(:provider).permit(:last_name, :first_name, :email, :price, :rating, :category, :expertise)
+    params.require(:provider).permit(:last_name, :first_name, :email,
+      :price, :rating, :category, :expertise, :phone)
   end
 
   def find_product
