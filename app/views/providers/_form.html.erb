@@ -7,7 +7,7 @@
   <%= f.input :email, placeholder: "alex@anagram.paris", label: "Email" %>
   <%= f.input :phone, placeholder: "06 ...", label: "Téléphone" %>
   <%= f.input :price, placeholder: "100", label: "Tarif jour" %>
-  <%= f.input :rating %>
+  <%= f.input :rating, input_html: { min:0, max:5} %>
   <%= f.button :submit, "Ajouter", class: "btn btn-success" %>
   <%= link_to 'Retour', providers_path, class: "btn btn-primary" %>
 
