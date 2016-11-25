@@ -1,11 +1,11 @@
 <%= simple_form_for(@provider) do |f| %>
   <%= f.error_notification %>
-  <%= f.input :category, :collection => %w[Développeur SEO Intégrateur SEM] %>
-  <%= f.input :expertise, :collection => %w[Wordpress Symphonie Node Rails] %>
+  <%= f.input :category, :collection => %w[Développeur SEO Intégrateur SEM], label: "Catégorie" %>
+  <%= f.input :expertise, :collection => %w[Wordpress Symphonie Node Rails],label: "Expertise" %>
   <%= f.input :first_name, placeholder: "Alex", label: "Prénom" %>
   <%= f.input :last_name, placeholder: "Roubinet", label: "Nom" %>
   <%= f.input :email, placeholder: "alex@anagram.paris", label: "Email" %>
-  <%= f.input :phone %>
+  <%= f.input :phone, placeholder: "06 ...", label: "Téléphone" %>
   <%= f.input :price, placeholder: "100", label: "Tarif jour" %>
   <%= f.input :rating %>
   <%= f.button :submit, "Ajouter", class: "btn btn-success" %>

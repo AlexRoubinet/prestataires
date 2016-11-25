@@ -1,8 +1,10 @@
 class ProvidersController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
 
+
   def index
       @providers = Provider.all
+      @last_db_update =  Provider.order("created_at").last.updated_at.to_formatted_s(:short)
   end
 
   def show
