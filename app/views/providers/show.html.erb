@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p><%= @provider.category %></p>
+<p><%= @provider.expertise %></p>
+<p><%= @provider.first_name %></p>
+<p><%= @provider.last_name %></p>
+<p><%= @provider.email%></p>
+<p><%= @provider.price%></p>
+<p><%= @provider.rating%></p>
+
+
+<%= link_to 'Editer', edit_provider_path(@provider) %> |
+<%= link_to 'Retour', providers_path %>
+<%= link_to 'Destroy', provider_path(@provider) , method: :delete, data: { confirm: 'Êtes-vous certain?' } %>
+

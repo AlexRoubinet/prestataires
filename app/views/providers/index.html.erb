@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center">Répertoire de freelance</h1>
+
+    <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Catégorie</th>
+                  <th>Expertise</th>
+                  <th>Prénom</th>
+                  <th>Nom</th>
+                  <th>Email</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <% @providers.each do |provider| %>
+                  <tr>
+                    <th><%= provider.category %></th>
+                     <th><%= provider.expertise %></th>
+                    <th><%= link_to provider.first_name, provider_path(provider) %></th>
+                    <th><%= link_to provider.last_name, provider_path(provider)  %></th>
+                    <th><%= provider.email %></th>
+                    <th><%= provider.price %></th>
+                  </tr>
+                  <% end %>
+              </tbody>
+            </table>
+          </div>
+
